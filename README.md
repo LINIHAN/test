@@ -14,7 +14,7 @@
 
         #header {
             background-color: #4CAF50;
-            width: 1437px;
+            width: 100%;
             height: 50px;
             display: flex;
             justify-content: space-between;
@@ -33,24 +33,10 @@
             font-size: 18px;
         }
 
-        #currencyBtn {
-            position: absolute;
-            left: 200px;
-            top: 2px;
-            width: 105px;
-            height: 49px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
+        #currencyBtn,
         #weatherBtn {
-            position: absolute;
-            left: 411px;
-            top: 3px;
-            width: 100px;
-            height: 47px;
+            width: 80px;
+            height: 40px;
             background-color: #4CAF50;
             color: white;
             border: none;
@@ -63,12 +49,13 @@
 
         #bookingForm {
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
             align-items: center;
         }
 
         #bookingForm label {
-            min-width: 80px;
+            min-width: 120px;
             text-align: right;
         }
 
@@ -80,7 +67,7 @@
             color: white;
             border: none;
             cursor: pointer;
-            width: 150px; /* 調整寬度 */
+            width: 100%; /* 調整寬度 */
         }
 
         #travelInfo {
@@ -89,6 +76,35 @@
 
         #bookingList {
             margin-top: 20px;
+        }
+    </style>
+
+    <style>
+        @media only screen and (max-width: 768px) {
+            /* 手機網頁樣式調整 */
+            #header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #title {
+                margin-top: 10px;
+            }
+
+            #subtitle {
+                margin-bottom: 10px;
+            }
+
+            #currencyBtn,
+            #weatherBtn {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            #bookingForm label {
+                min-width: 100%;
+                text-align: left;
+            }
         }
     </style>
 </head>
